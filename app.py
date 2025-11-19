@@ -38,7 +38,7 @@ if os.path.exists(META_PATH):
 
 with st.sidebar:
     st.header("Inputs")
-    # Use saved schema to drive UI choices and limits
+
     qty_min = 1
     qty_max = 5
     if schema and "numeric" in schema and "Quantity" in schema["numeric"]:
