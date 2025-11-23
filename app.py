@@ -44,7 +44,7 @@ with st.sidebar:
     if schema and "numeric" in schema and "Quantity" in schema["numeric"]:
         qty_min = int(schema["numeric"]["Quantity"].get("min", qty_min))
         qty_max = int(schema["numeric"]["Quantity"].get("max", qty_max))
-    quantity = st.number_input("Quantity", min_value=qty_min, max_value=qty_max, value=min(max(qty_min, 3), qty_max))
+    quantity = st.number_input("Quantity", min_value=qty_min, max_value=max(qty_max, 50), value=min(max(qty_min, 3), qty_max))
 
     cat_vals = {
         "Product_Category": [
